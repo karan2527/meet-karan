@@ -49,6 +49,14 @@ function DevToIcon() {
   );
 }
 
+function YouTubeIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[18px] w-[18px] fill-current">
+      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.376.505A3.016 3.016 0 0 0 .502 6.186C0 8.057 0 12 0 12s0 3.943.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.376-.505a3.016 3.016 0 0 0 2.122-2.136C24 15.943 24 12 24 12s0-3.943-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+    </svg>
+  );
+}
+
 function PortfolioIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -72,6 +80,7 @@ function SocialIcon({ label }: { label: string }) {
   if (label === "GitHub") return <GitHubIcon />;
   if (label === "Twitter") return <TwitterIcon />;
   if (label === "Dev.to") return <DevToIcon />;
+  if (label === "YouTube") return <YouTubeIcon />;
   if (label === "Portfolio" || label === "TryHackMe") return <PortfolioIcon />;
   return <EmailIcon />;
 }

@@ -4,7 +4,7 @@ export type NavItem = {
 };
 
 export type SocialLink = {
-  label: "LinkedIn" | "GitHub" | "Twitter" | "Dev.to" | "TryHackMe" | "Email" | string;
+  label: "LinkedIn" | "GitHub" | "Twitter" | "Dev.to" | "YouTube" | "TryHackMe" | "Email" | string;
   href: string;
 };
 

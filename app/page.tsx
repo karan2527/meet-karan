@@ -14,6 +14,7 @@ import {
   achievements,
   blogPosts,
   experiences,
+  invitationAchievements,
   navItems,
   projects,
   skillGroups,
@@ -35,7 +36,7 @@ export default function Home() {
       <About />
       <Experience experiences={experiences} />
       <Skills groups={skillGroups} />
-      <Achievements items={achievements} />
+      <Achievements items={achievements} invitations={invitationAchievements} />
       <Projects projects={projects} />
       <Blog posts={blogPosts} />
       <Volunteering items={volunteering} />

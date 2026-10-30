@@ -2,67 +2,83 @@
 
 import { useEffect, useState } from "react";
 
-const ROLES = [
-  "Cybersecurity Engineer",
+const roles = [
   "Security Researcher",
-  "Software Developer",
-  "PQC & Cryptography Researcher",
   "Flutter Developer",
-  "Ethical Hacker & CTF Player",
-  "Open Source Contributor",
+  "Software Engineer",
 ];
 
 export default function Typewriter() {
   const [roleIndex, setRoleIndex] = useState(0);
-  const [displayText, setDisplayText] = useState(ROLES[0]);
+  const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
-    const currentRole = ROLES[roleIndex];
+    const currentRole = roles[roleIndex];
 
-    if (isDeleting) {
-      if (displayText.length > 0) {
-        // Deleting character by character
-        timer = setTimeout(() => {
-          setDisplayText((prev) => prev.slice(0, -1));
-        }, 35);
-      } else {
-        // Finished deleting: wait briefly, then move to next role
-        timer = setTimeout(() => {
-          setIsDeleting(false);
-          setRoleIndex((prev) => (prev + 1) % ROLES.length);
-        }, 250);
-      }
-    } else {
-      if (displayText.length < currentRole.length) {
-        // Typing forward next character
-        timer = setTimeout(() => {
-          setDisplayText(currentRole.slice(0, displayText.length + 1));
-        }, 70);
-      } else {
-        // Finished typing role: pause before deleting
-        timer = setTimeout(() => {
-          setIsDeleting(true);
-        }, 1800);
+    let delay = 100;
+
+    // Typing
+    if (!isDeleting) {
+      delay = 100;
+
+      // Full word ke baad pause
+      if (text === currentRole) {
+        delay = 1500;
       }
     }
 
+    // Deleting
+    if (isDeleting) {
+      delay = 60;
+
+      // Empty hone ke baad short pause
+      if (text === "") {
+        delay = 400;
+      }
+    }
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        // One character add
+        const nextText = currentRole.substring(
+          0,
+          text.length + 1
+        );
+
+        setText(nextText);
+
+        // Full word typed
+        if (nextText === currentRole) {
+          setIsDeleting(true);
+        }
+      } else {
+        // One character remove
+        const nextText = currentRole.substring(
+          0,
+          text.length - 1
+        );
+
+        setText(nextText);
+
+        // Word completely deleted
+        if (nextText === "") {
+          setIsDeleting(false);
+
+          setRoleIndex(
+            (prevIndex) => (prevIndex + 1) % roles.length
+          );
+        }
+      }
+    }, delay);
+
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, roleIndex]);
+  }, [text, isDeleting, roleIndex]);
 
   return (
-    <div
-      aria-live="polite"
-      className="flex min-h-[56px] items-center font-mono text-2xl font-semibold tracking-tight text-[#00ff66] sm:min-h-[48px] sm:text-3xl"
-    >
-      <span className="drop-shadow-[0_0_12px_rgba(0,255,102,0.45)]">
-        {displayText}
-      </span>
-      <span className="ml-1 inline-block animate-pulse font-bold text-[#00ff66] drop-shadow-[0_0_8px_rgba(0,255,102,0.8)]">
-        _
-      </span>
+    <div className="min-h-[45px] font-mono text-2xl font-semibold text-[#00ff66] sm:text-3xl">
+      {text}
+      <span className="ml-1 animate-pulse">_</span>
     </div>
   );
 }
-

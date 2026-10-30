@@ -18,7 +18,7 @@ export const socialLinks: SocialLink[] = [
   { label: "GitHub", href: "https://github.com/karan2527" },
   { label: "Twitter", href: "https://x.com/Karanjain2311" },
   { label: "Dev.to", href: "https://dev.to/karanjain2527" },
-  { label: "Portfolio", href: "https://tryhackme.com/p/karanjain2527" },
+  { label: "YouTube", href: "https://www.youtube.com/@kaaran-jain" },
   { label: "Email", href: "mailto:karanjain2527@gmail.com" },
 ];
 
@@ -131,7 +131,7 @@ export const achievements: AchievementItem[] = [
     imagePosition: "center 30%",
   },
   {
-    title: "2nd place in cybersecurity track and 4th overall at Recurzive V2 International Hackathon",
+    title: "2nd place in security track and 4th overall at Recurzive V2 International Hackathon",
     organization: "DSCE,Bangalore",
     date: "Sept 2025",
     image: "/images/achivements/recursive.png",
@@ -158,6 +158,30 @@ export const achievements: AchievementItem[] = [
     image: "/images/achivements/javaverse.png",
     imagePosition: "center 30%",
   }
+];
+
+export const invitationAchievements: AchievementItem[] = [
+  {
+    title: "Invited as Mentor & Judge - Farlands-48 hr",
+    organization: "Cambridge Institute of Technology",
+    date: "Oct 2026",
+    image: "/images/achivements/farlands.jpg",
+    imagePosition: "center 45%",
+  },
+  {
+    title: "Invited as Mentor & Judge - Cypher 4.0",
+    organization: "Atria Institute of Technology",
+    date: "Oct 2026",
+    image: "/images/achivements/cypher_4.JPG",
+    imagePosition: "center",
+  },
+  {
+    title: "Invited as Chief Guest - Sustainathon-26",
+    organization: "VIT Vellore",
+    date: "Oct 2026",
+    image: "/images/achivements/vit_vellore.jpeg",
+    imagePosition: "center 55%",
+  },
 ];
 
 export const certifications: CertificationItem[] = [
