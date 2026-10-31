@@ -11,17 +11,17 @@ export default function About() {
         />
 
         <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:gap-10 md:items-center">
-          <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.02] p-3">
+          <div className="mx-auto w-full max-w-[440px] overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.02] p-2.5 md:mx-0">
             <img
               src="/images/about.jpg"
               alt="Karan Jain working desk"
-              className="aspect-[4/3] w-full rounded-[1.5rem] object-cover object-[center_35%] sm:aspect-auto sm:h-[420px]"
+              className="aspect-[4/3] w-full rounded-[1.15rem] object-cover object-[center_35%] sm:aspect-auto sm:h-[340px]"
             />
           </div>
 
           <div>
             {/* Info Box */}
-            <div className="mb-6 rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-sm">
+            <div className="mb-5 rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-sm">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <p className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">Degree</p>
@@ -38,10 +38,10 @@ export default function About() {
                 <div>
                   <p className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">Email</p>
                   <a
-                    href="mailto:karanjain2527@gmail.com"
+                    href="mailto:karanjain252727@gmail.com"
                     className="mt-0.5 text-sm font-medium text-white hover:text-[#00ff66] transition-colors"
                   >
-                    karanjain2527@gmail.com
+                    karanjain252727@gmail.com
                   </a>
                 </div>
               </div>

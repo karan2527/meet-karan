@@ -21,7 +21,7 @@ const DEFAULT_LINES = [
   "  cat about       read about.md",
   "  cat skills      list tech stack",
   "  social          show social links",
-  "  goto <page>     navigate: home | about | experience | skills | achievements | projects | certifications | blog | volunteering | contact",
+  "  goto <page>     navigate: home | about | experience | skills | achievements | projects | blog | volunteering | contact",
   "  theme           toggle light/dark theme",
   "  clear           clear terminal (ctrl+l)",
 ];
@@ -64,7 +64,7 @@ export default function TerminalCard({
           "  cat about       read about.md",
           "  cat skills      list tech stack",
           "  social          show social links",
-          "  goto <page>     navigate: home | about | experience | skills | achievements | projects | certifications | blog | volunteering | contact",
+          "  goto <page>     navigate: home | about | experience | skills | achievements | projects | blog | volunteering | contact",
           "  theme           toggle light/dark theme",
           "  clear           clear terminal (ctrl+l)"
         );
@@ -89,7 +89,7 @@ export default function TerminalCard({
         } else if (!args) {
           response.push(
             "about.md        skills.txt         experience.txt",
-            "achievements.txt certifications.txt blog.md volunteering.txt contact.md"
+            "achievements.txt blog.md volunteering.txt contact.md"
           );
         } else {
           response.push(`ls: cannot access '${args}': No such file or directory`);
@@ -131,12 +131,6 @@ export default function TerminalCard({
             "• Top 4% - TryHackMe global ranking",
             "• 1st place - JavaVerse & CodeRelay coding events"
           );
-        } else if (args === "certifications" || args === "certifications.txt") {
-          response.push(
-            "• Pre Security - TryHackMe",
-            "• AWS for Beginners - Great Learning",
-            "• Spring Boot 3 & C# Essential Training - LinkedIn Learning"
-          );
         } else if (args === "blog" || args === "blog.md") {
           response.push(
             "• What Really Happens When You Move Your Mouse? - Technology",
@@ -150,7 +144,7 @@ export default function TerminalCard({
           );
         } else if (args === "contact" || args === "contact.md") {
           response.push(
-            "Email: karanjain2527@gmail.com",
+            "Email: karanjain252727@gmail.com",
             "LinkedIn: https://www.linkedin.com/in/karan-jain-5674062a4/",
             "GitHub: https://github.com/Karan-2527"
           );
@@ -168,13 +162,13 @@ export default function TerminalCard({
           "Twitter:  https://x.com",
           "Dev.to:   https://dev.to",
           "YouTube:  https://www.youtube.com/@kaaran-jain",
-          "Email:    karanjain2527@gmail.com"
+          "Email:    karanjain252727@gmail.com"
         );
         break;
 
       case "goto":
         if (!args) {
-          response.push("usage: goto <page>. Available: home, about, experience, skills, achievements, projects, certifications, blog, volunteering, terminal, contact");
+          response.push("usage: goto <page>. Available: home, about, experience, skills, achievements, projects, blog, volunteering, terminal, contact");
         } else {
           const targetId = args;
           const section = document.getElementById(targetId);
@@ -184,7 +178,7 @@ export default function TerminalCard({
               section.scrollIntoView({ behavior: "smooth" });
             }, 100);
           } else {
-            response.push(`goto: section '#${targetId}' not found. Available: home, about, experience, skills, achievements, projects, certifications, blog, volunteering, terminal, contact`);
+            response.push(`goto: section '#${targetId}' not found. Available: home, about, experience, skills, achievements, projects, blog, volunteering, terminal, contact`);
           }
         }
         break;
@@ -194,7 +188,7 @@ export default function TerminalCard({
         break;
 
       case "ping":
-        response.push("64 bytes from karanjain2527@gmail.com: icmp_seq=1 ttl=64 time=0.032 ms");
+        response.push("64 bytes from karanjain252727@gmail.com: icmp_seq=1 ttl=64 time=0.032 ms");
         break;
 
       default:

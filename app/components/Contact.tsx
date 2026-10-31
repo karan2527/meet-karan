@@ -1,12 +1,11 @@
 "use client";
 
-import TerminalCard from "./TerminalCard";
 import { copyToClipboard } from "./InteractiveExtras";
 
 export default function Contact() {
   const handleCopyEmail = (e: React.MouseEvent) => {
     e.preventDefault();
-    copyToClipboard("karanjain2527@gmail.com", "Email copied to clipboard! 📋");
+    copyToClipboard("karanjain252727@gmail.com", "Email copied to clipboard! 📋");
   };
 
   return (
@@ -21,8 +20,8 @@ export default function Contact() {
           <div className="space-y-3 text-sm text-zinc-300">
             <p className="flex items-center gap-2 flex-wrap">
               <span>Email:</span>
-              <a href="mailto:karanjain2527@gmail.com" className="text-white hover:text-[#00ff66] transition">
-                karanjain2527@gmail.com
+              <a href="mailto:karanjain252727@gmail.com" className="text-white hover:text-[#00ff66] transition">
+                karanjain252727@gmail.com
               </a>
               <button
                 onClick={handleCopyEmail}
@@ -55,11 +54,6 @@ export default function Contact() {
             </div>
           </div>
         </div>
-
-        <TerminalCard
-          className="mt-8 max-w-lg"
-          lines={["$ ping karanjain2527@gmail.com", "reply: lets build something secure"]}
-        />
 
         <p className="mt-10 pb-8 text-sm text-zinc-500">© 2026 Karan Jain.</p>
       </div>

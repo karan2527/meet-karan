@@ -449,7 +449,7 @@ export default function Navbar({ navItems, socialLinks }: NavbarProps) {
                 Projects
               </a>
               <a
-                href="mailto:karanjain2527@gmail.com"
+                href="mailto:karanjain252727@gmail.com"
                 onClick={closeAll}
                 className="flex-1 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-center text-xs font-semibold text-white transition hover:border-[#00ff66]/40 hover:text-[#00ff66]"
               >

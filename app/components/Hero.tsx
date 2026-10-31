@@ -1,6 +1,5 @@
 "use client";
 
-import type { HeroStat } from "./types";
 import Typewriter from "./Typewriter";
 import HangingSpider from "./HangingSpider";
 import CyberDino from "./CyberDino";
@@ -21,7 +20,7 @@ export default function Hero() {
         </p>
 
         {/* Main heading */}
-        <h1 className="max-w-xl text-[clamp(2rem,7vw,4rem)] font-medium leading-[1.05] tracking-[-0.06em] text-white">
+        <h1 className="max-w-xl text-[clamp(1.875rem,6vw,3.25rem)] font-medium leading-[1.05] tracking-[-0.06em] text-white">
           Hi, I&apos;m Karan Jain!
         </h1>
 
@@ -37,7 +36,7 @@ export default function Hero() {
         <div className="mt-6 sm:mt-8">
 
           {/* < I'm > */}
-          <div className="font-mono text-xl font-medium sm:text-2xl md:text-3xl">
+          <div className="font-mono text-lg font-medium sm:text-xl md:text-2xl">
 
             <span className="text-[#00ff66]">
               &lt;
@@ -64,7 +63,7 @@ export default function Hero() {
         {/* DESCRIPTION */}
         {/* ================================================= */}
 
-        <p className="mt-6 max-w-xl text-base leading-7 sm:text-lg sm:leading-8 text-zinc-400">
+        <p className="mt-5 max-w-xl text-sm leading-6 sm:text-base sm:leading-7 text-zinc-400">
           I&apos;m Karan, a computer science student specializing in
           cybersecurity - researching post-quantum cryptography,
           building secure tools, and breaking things at hackathons.
@@ -74,18 +73,18 @@ export default function Hero() {
         {/* BUTTONS + CYBER DINO */}
         {/* ================================================= */}
 
-        <div className="mt-8 flex flex-wrap items-center gap-4">
+        <div className="mt-7 flex flex-wrap items-center gap-3">
 
           <a
             href="#projects"
-            className="rounded-full bg-white px-6 py-3 text-xs sm:text-sm font-medium text-black transition duration-200 hover:bg-zinc-200 hover:scale-105 active:scale-95"
+            className="rounded-full bg-white px-5 py-2.5 text-xs font-medium text-black transition duration-200 hover:bg-zinc-200 hover:scale-105 active:scale-95"
           >
             View Projects
           </a>
 
           <a
-            href="mailto:karanjain2527@gmail.com"
-            className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-xs sm:text-sm font-medium text-white transition duration-200 hover:border-[#00ff66]/40 hover:text-[#00ff66] hover:bg-[#00ff66]/5 active:scale-95"
+            href="mailto:karanjain252727@gmail.com"
+            className="rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-xs font-medium text-white transition duration-200 hover:border-[#00ff66]/40 hover:text-[#00ff66] hover:bg-[#00ff66]/5 active:scale-95"
           >
             Get In Touch
           </a>
@@ -105,16 +104,16 @@ export default function Hero() {
       <div className="order-1 flex justify-center lg:order-2">
 
         {/* Image container with hanging spider */}
-        <div className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-none rounded-[2rem] border border-white/10 bg-[#0d0d0d] p-3 shadow-2xl transition duration-500 hover:border-[#00ff66]/30">
+        <div className="relative w-full max-w-[300px] sm:max-w-[340px] lg:max-w-[380px] rounded-[1.5rem] border border-white/10 bg-[#0d0d0d] p-2.5 shadow-2xl transition duration-500 hover:border-[#00ff66]/30">
 
           {/* Hanging Spider from Header/Top */}
           <HangingSpider />
 
-          <div className="overflow-hidden rounded-[1.6rem] relative">
+          <div className="overflow-hidden rounded-[1.2rem] relative">
             <img
               src="/images/profile.jpg"
               alt="Karan Jain profile"
-              className="aspect-[4/5] h-auto w-full object-cover object-[center_35%] sm:aspect-auto sm:h-[400px] lg:h-[460px]"
+              className="aspect-[4/5] h-auto w-full object-cover object-[center_35%] sm:aspect-auto sm:h-[340px] lg:h-[380px]"
             />
 
             <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />

@@ -1,4 +1,4 @@
-import type { AchievementItem, BlogPost, CertificationItem, ExperienceItem, HeroStat, NavItem, Project, SkillGroup, SocialLink, VolunteeringItem } from "./types";
+import type { AchievementItem, BlogPost, ExperienceItem, HeroStat, NavItem, Project, SkillGroup, SocialLink, VolunteeringItem } from "./types";
 
 // All editable portfolio content is centralized here.
 // If you want to add or update content, this is the first file to edit.
@@ -9,10 +9,8 @@ export const navItems: NavItem[] = [
   { label: "Skills", href: "#skills" },
   { label: "Achievements", href: "#achievements" },
   { label: "Projects", href: "#projects" },
-  { label: "Certifications", href: "#certifications" },
   { label: "Blog", href: "#blog" },
   { label: "Volunteering", href: "#volunteering" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -21,7 +19,7 @@ export const socialLinks: SocialLink[] = [
   { label: "Twitter", href: "https://x.com/Karanjain2311" },
   { label: "Dev.to", href: "https://dev.to/karanjain2527" },
   { label: "YouTube", href: "https://www.youtube.com/@kaaran-jain" },
-  { label: "Email", href: "mailto:karanjain2527@gmail.com" },
+  { label: "Email", href: "mailto:karanjain252727@gmail.com" },
 ];
 
 export const heroStats: HeroStat[] = [
@@ -34,47 +32,246 @@ export const heroStats: HeroStat[] = [
 export const projects: Project[] = [
   {
     number: "01",
+    slug: "darkdrop",
     category: "Offline secure file transfer tool",
     title: "DarkDrop",
     description:
-      "A privacy-first, AES-256 encrypted file transfer tool with a password-protected sharing mechanism and dark-themed GUI - no internet or cloud dependency required.",
-    stack: ["Python", "Tkinter", "Cryptography"],
-    image: "/images/projects/darkdrop.png",
+      "A secure file transfer tool for sending files over a network with AES-256 encryption, password protection, and a dark Tkinter GUI.",
+    descriptionHighlights: ["secure file transfer", "AES-256 encryption", "password protection", "Tkinter"],
+    details: [
+      {
+        text: "Transfers files between sender and receiver modes over TCP/IP without sending plaintext data.",
+        highlights: ["sender and receiver modes", "TCP/IP", "plaintext"],
+      },
+      {
+        text: "Uses AES-256 in CBC mode with PBKDF2-SHA256 key derivation and 100,000 iterations.",
+        highlights: ["AES-256", "CBC", "PBKDF2-SHA256", "100,000 iterations"],
+      },
+      {
+        text: "Provides a dark-themed Tkinter interface with password-protected transfers.",
+        highlights: ["dark-themed Tkinter", "password-protected transfers"],
+      },
+      {
+        text: "Supports local-network or internet transfers with a combined send and receive workflow.",
+        highlights: ["local-network", "internet transfers", "send and receive"],
+      },
+      {
+        text: "Documents production hardening opportunities including dynamic salts, HMAC authentication, TLS, and integrity checks.",
+        highlights: ["dynamic salts", "HMAC authentication", "TLS", "integrity checks"],
+      },
+    ],
+    stack: ["Python", "Tkinter", "AES-256", "PBKDF2", "TCP/IP"],
+    image: "/images/projects/darkdrop/DarkDrop Secure File Transfer.png",
+    screenshots: [
+      "/images/projects/darkdrop/s1.png",
+      "/images/projects/darkdrop/s2.png",
+    ],
     link: "https://github.com/karan2527/DarkDrop",
   },
   {
     number: "02",
-    category: "Privacy & Security Mobile App",
-    title: "Azaadi",
+    slug: "crackproof",
+    category: "Password security analysis tool",
+    title: "CrackProof",
     description:
-      "An open-source, privacy-focused application built with Flutter to provide secure tools and digital sovereignty resources for users.",
-    stack: ["Flutter", "Dart", "Security", "Open Source"],
-    image: "/images/projects/azaadi.png",
-    link: "https://github.com/Flutter-Kanpur/azadi-app",
-    imagePosition: " center 40%",
-
-
+      "A password security analyzer that combines entropy scoring, weak-pattern detection, and breach checking to help users create stronger passwords.",
+    descriptionHighlights: ["password security analyzer", "entropy scoring", "weak-pattern detection", "breach checking"],
+    details: [
+      {
+        text: "Estimates password entropy and analyzes character classes to provide a security score.",
+        highlights: ["password entropy", "character classes", "security score"],
+      },
+      {
+        text: "Detects sequences, repeated characters, keyboard runs, dates, and dictionary words.",
+        highlights: ["sequences", "keyboard runs", "dates", "dictionary words"],
+      },
+      {
+        text: "Supports optional Have I Been Pwned range queries using k-anonymity for breach checks.",
+        highlights: ["Have I Been Pwned", "range queries", "k-anonymity"],
+      },
+      {
+        text: "Presents live scoring and actionable password tips in a dark-themed Tkinter interface.",
+        highlights: ["live scoring", "password tips", "Tkinter"],
+      },
+    ],
+    stack: ["Python", "Tkinter", "Entropy Analysis", "Pattern Detection", "HIBP"],
+    image: "/images/projects/crackproof/CrackProof Terminal Security Banner.png",
+    screenshots: ["/images/projects/crackproof/s1.png"],
+    link: "https://github.com/karan2527/CrackProof",
   },
   {
     number: "03",
-    category: "Open-source mobile app",
-    title: "ReadMe",
+    slug: "gqlx",
+    category: "GraphQL security testing framework",
+    title: "gqlx",
     description:
-      "An open-source mobile application for reading, organizing, and managing content with a clean and modern user experience.",
-    stack: ["Flutter", "Dart", "Open Source"],
-    image: "/images/projects/readme.png",
-    link: "https://github.com/Flutter-Kanpur/readmeApp",
-    imagePosition: " center 40%",
+      "A Python GraphQL security scanner that discovers schemas, generates type-aware operations, runs bounded security modules, and produces reviewable reports.",
+    descriptionHighlights: ["Python GraphQL security scanner", "discovers schemas", "type-aware operations", "security modules"],
+    details: [
+      {
+        text: "Discovers GraphQL schemas through full, bypass, partial, or wordlist-based introspection methods.",
+        highlights: ["GraphQL schemas", "full", "bypass", "partial", "wordlist-based introspection"],
+      },
+      {
+        text: "Maps queries, mutations, fields, arguments, types, and relationships before building valid operations.",
+        highlights: ["queries", "mutations", "fields", "valid operations"],
+      },
+      {
+        text: "Runs security modules for information disclosure, injection, BOLA, authentication, SSRF, tenant isolation, and DoS.",
+        highlights: ["information disclosure", "injection", "BOLA", "SSRF", "tenant isolation", "DoS"],
+      },
+      {
+        text: "Uses response, timing, and cross-identity oracles to separate confirmed findings from tentative signals.",
+        highlights: ["timing", "cross-identity", "confirmed findings", "tentative signals"],
+      },
+      {
+        text: "Exports HTML, JSON, or Markdown reports with evidence, confidence, severity, and remediation guidance.",
+        highlights: ["HTML", "JSON", "Markdown", "confidence", "severity"],
+      },
+    ],
+    stack: ["Python", "GraphQL", "Security Testing", "CLI", "HTML/JSON/Markdown"],
+    image: "/images/gqlx_banner.png",
+    screenshots: [],
+    link: "https://github.com/karan2527/gqlx",
   },
   {
     number: "04",
-    category: "Open-source contribution & UI Kit",
+    slug: "stegx",
+    category: "Image steganography CLI",
+    title: "StegX",
+    description:
+      "A lightweight Python CLI for hiding and extracting text in images with LSB steganography and minimal visible pixel changes.",
+    descriptionHighlights: ["Python CLI", "hiding and extracting text", "LSB steganography", "minimal visible pixel changes"],
+    details: [
+      {
+        text: "Embeds UTF-8 message bits into the least significant bits of RGB pixel channels.",
+        highlights: ["UTF-8", "least significant bits", "RGB pixel channels"],
+      },
+      {
+        text: "Supports PNG, BMP, JPG, and JPEG image inputs through a simple command-line interface.",
+        highlights: ["PNG", "BMP", "JPG", "JPEG", "command-line interface"],
+      },
+      {
+        text: "Checks image capacity before embedding a message.",
+        highlights: ["image capacity"],
+      },
+      {
+        text: "Provides separate capacity, embed, and extract commands for the core workflow.",
+        highlights: ["capacity", "embed", "extract"],
+      },
+      {
+        text: "Automatically saves extracted text to decoded_message.txt and recommends lossless formats for reliability.",
+        highlights: ["decoded_message.txt", "lossless formats"],
+      },
+    ],
+    stack: ["Python", "LSB", "Steganography", "CLI", "Pillow"],
+    image: "/images/stegx_banner.png",
+    screenshots: [],
+    link: "https://github.com/karan2527/stegx",
+  },
+  {
+    number: "05",
+    slug: "readme",
+    category: "Flutter blog app",
+    title: "ReadMe",
+    description:
+      "A Flutter blog app that runs standalone or inside the Flutter Kanpur app, with Supabase-backed content, OAuth setup, deep links, and Shorebird updates.",
+    descriptionHighlights: ["Flutter blog app", "standalone", "Supabase", "deep links", "Shorebird"],
+    details: [
+      {
+        text: "Runs as a standalone Flutter application or as an embedded feature inside the Flutter Kanpur main app.",
+        highlights: ["standalone Flutter application", "embedded", "Flutter Kanpur"],
+      },
+      {
+        text: "Uses Supabase and OAuth configuration through an environment file that stays out of the committed package.",
+        highlights: ["Supabase", "OAuth", "environment file"],
+      },
+      {
+        text: "Supports shared article deep links that open content inside the app when platform verification is configured.",
+        highlights: ["article deep links", "platform verification"],
+      },
+      {
+        text: "Uses Shorebird for Dart code patches on the standalone app while native changes still require a store release.",
+        highlights: ["Shorebird", "Dart code patches", "native changes", "store release"],
+      },
+    ],
+    stack: ["Flutter", "Dart", "Supabase", "OAuth", "Shorebird"],
+    image: "/images/projects/readme/readme_banner.png",
+    screenshots: [
+      "/images/projects/readme/readme.png",
+      "/images/projects/readme/s1.png",
+      "/images/projects/readme/s2.png",
+      "/images/projects/readme/s3.png",
+      "/images/projects/readme/s4.png",
+    ],
+    link: "https://github.com/Flutter-Kanpur/readmeApp",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.drishtant.readme&hl=en_IN",
+  },
+  {
+    number: "06",
+    slug: "azaadi",
+    category: "Flutter music player app",
+    title: "Azaadi",
+    description:
+      "A Flutter music player application and open-source mobile project built as a foundation for a cross-platform app experience.",
+    descriptionHighlights: ["Flutter music player", "open-source", "cross-platform app"],
+    details: [
+      {
+        text: "Built with Flutter as a mobile music player application.",
+        highlights: ["Flutter", "music player application"],
+      },
+      {
+        text: "Uses the standard Flutter project structure as a foundation for continued application development.",
+        highlights: ["standard Flutter project structure"],
+      },
+      {
+        text: "Can be run and extended using the Flutter development workflow and official Flutter resources.",
+        highlights: ["Flutter development workflow", "official Flutter resources"],
+      },
+    ],
+    stack: ["Flutter", "Dart", "Mobile", "Music Player"],
+    image: "/images/projects/azaadi/azaadi.png",
+    screenshots: [
+      "/images/projects/azaadi/s1.png",
+      "/images/projects/azaadi/s2.png",
+      "/images/projects/azaadi/s3.png",
+    ],
+    link: "https://github.com/Flutter-Kanpur/azadi-app",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.flutterkanpur.azaadi&hl=en_IN",
+    imageBadge: "Maintainer",
+    imagePosition: "center 40%",
+  },
+  {
+    number: "07",
+    slug: "flutter-kanpur-ui-kit",
+    category: "Flutter UI component library",
     title: "Flutter Kanpur UI Kit",
     description:
-      "Published a reusable Flutter UI package featuring custom widgets like GradientButton() and merged 10+ PRs into the official Flutter Kanpur app.",
-    stack: ["Flutter", "Dart", "UI Package", "pub.dev"],
+      "An open-source Flutter component library from the Flutter Kanpur Community with reusable widgets, animations, and UI patterns for production-ready interfaces.",
+    descriptionHighlights: ["open-source Flutter component library", "reusable widgets", "animations", "production-ready interfaces"],
+    details: [
+      {
+        text: "Contributed the Gradient Button, a custom Flutter button with a gradient effect designed to create a 3D visual appearance.",
+        highlights: ["Gradient Button", "custom Flutter button", "gradient effect", "3D visual appearance"],
+      },
+      {
+        text: "The package also provides Custom Navigation Bar and Glass Navigation Bar components with reveal-text and glass effects.",
+        highlights: ["Custom Navigation Bar", "Glass Navigation Bar", "reveal-text", "glass effects"],
+      },
+      {
+        text: "Published as flutter_kanpur_ui_kit, with the latest documented package version 0.0.13 on pub.dev.",
+        highlights: ["flutter_kanpur_ui_kit", "0.0.13", "pub.dev"],
+      },
+      {
+        text: "Designed to grow through community contributions and provide consistent UI building blocks for Flutter applications.",
+        highlights: ["community contributions", "consistent UI building blocks", "Flutter applications"],
+      },
+    ],
+    stack: ["Flutter", "Dart", "UI Components", "GradientButton", "Open Source"],
     image: "/images/projects/gradientbutton.png",
-    link: "https://pub.dev/packages/flutter_kanpur_ui_kit",
+    screenshots: ["/images/projects/gradientbutton.png"],
+    link: "https://github.com/Flutter-Kanpur/Flutter-Kanpur-Ui-Kit",
+    packageLink: "https://pub.dev/packages/flutter_kanpur_ui_kit",
   },
 ];
 
@@ -255,14 +452,6 @@ export const invitationAchievements: AchievementItem[] = [
     date: "Oct 2026",
     image: "/images/achivements/vit_vellore.jpeg",
     imagePosition: "center 55%",
-  },
-];
-
-export const certifications: CertificationItem[] = [
-  {
-    title: "Pre Security",
-    issuer: "TryHackMe",
-    link: "https://tryhackme.com",
   },
 ];
 

@@ -9,37 +9,31 @@ type ProjectsProps = {
   projects: Project[];
 };
 
-type FilterCategory = "All" | "Security" | "Mobile" | "Open Source";
+type FilterCategory = "All" | "Security" | "Mobile" | "Open Source" | "Package";
+
+const allProjectSlugs = ["darkdrop", "crackproof", "gqlx", "stegx"];
 
 export default function Projects({ projects }: ProjectsProps) {
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("All");
 
   const filteredProjects = projects.filter((project) => {
-    if (activeFilter === "All") return true;
+    if (activeFilter === "All") return allProjectSlugs.includes(project.slug);
     if (activeFilter === "Security") {
-      return (
-        project.category.toLowerCase().includes("security") ||
-        project.category.toLowerCase().includes("secure") ||
-        project.stack.some((s) => ["Cryptography", "Security"].includes(s))
-      );
+      return ["gqlx", "stegx", "darkdrop", "crackproof"].includes(project.slug);
     }
     if (activeFilter === "Mobile") {
-      return (
-        project.category.toLowerCase().includes("mobile") ||
-        project.stack.some((s) => ["Flutter", "Dart"].includes(s))
-      );
+      return ["readme", "azaadi"].includes(project.slug);
     }
     if (activeFilter === "Open Source") {
-      return (
-        project.category.toLowerCase().includes("open-source") ||
-        project.category.toLowerCase().includes("contribution") ||
-        project.stack.some((s) => s.toLowerCase().includes("open source"))
-      );
+      return ["readme", "azaadi"].includes(project.slug);
     }
-    return true;
+    if (activeFilter === "Package") {
+      return project.slug === "flutter-kanpur-ui-kit";
+    }
+    return allProjectSlugs.includes(project.slug);
   });
 
-  const categories: FilterCategory[] = ["All", "Security", "Mobile", "Open Source"];
+  const categories: FilterCategory[] = ["All", "Security", "Mobile", "Open Source", "Package"];
 
   return (
     <section id="projects" className="section-divider section-spacing">
@@ -74,7 +68,7 @@ export default function Projects({ projects }: ProjectsProps) {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 transition-all duration-500">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 transition-all duration-500">
           {filteredProjects.map((project) => (
             <div key={project.title} className="transition-all duration-300">
               <ProjectCard project={project} />

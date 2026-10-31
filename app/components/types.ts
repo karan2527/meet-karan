@@ -15,13 +15,25 @@ export type HeroStat = {
 
 export type Project = {
   number: string;
+  slug: string;
   category: string;
   title: string;
   description: string;
+  descriptionHighlights: string[];
+  details: ProjectDetail[];
   stack: string[];
   image: string;
+  screenshots?: string[];
   imagePosition?: string;
   link: string;
+  playStoreLink?: string;
+  packageLink?: string;
+  imageBadge?: string;
+};
+
+export type ProjectDetail = {
+  text: string;
+  highlights: string[];
 };
 
 export type ExperienceItem = {
@@ -58,12 +70,6 @@ export type AchievementItem = {
   date: string;
   image?: string;
   imagePosition?: string;
-};
-
-export type CertificationItem = {
-  title: string;
-  issuer: string;
-  link: string;
 };
 
 export type BlogPost = {
