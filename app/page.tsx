@@ -1,6 +1,8 @@
 import About from "./components/About";
 import Achievements from "./components/Achievements";
 import Blog from "./components/Blog";
+import Certifications from "./components/Certifications";
+import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -13,6 +15,7 @@ import InteractiveExtras from "./components/InteractiveExtras";
 import {
   achievements,
   blogPosts,
+  certifications,
   experiences,
   invitationAchievements,
   navItems,
@@ -38,13 +41,12 @@ export default function Home() {
       <Skills groups={skillGroups} />
       <Achievements items={achievements} invitations={invitationAchievements} />
       <Projects projects={projects} />
+      <Certifications items={certifications} />
       <Blog posts={blogPosts} />
       <Volunteering items={volunteering} />
 
-      {/* Single Interactive Terminal at the end */}
       <TerminalSection />
-
-      {/* Footer */}
+      <Contact />
       <Footer socialLinks={socialLinks} />
 
       {/* Dynamic utilities: Back to top, copy toast */}

@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <span className="text-[10px] uppercase tracking-wider text-zinc-500 font-mono truncate">{project.category}</span>
           </div>
 
-          <h3 className="text-base font-semibold tracking-tight text-white group-hover:text-[#00ff66] transition-colors">{project.title}</h3>
+          <h3 className="text-sm font-semibold tracking-tight text-white group-hover:text-[#00ff66] transition-colors">{project.title}</h3>
           <p className="mt-1.5 text-xs leading-relaxed text-zinc-400">{project.description}</p>
 
           <div className="mt-3 flex flex-wrap gap-1">

@@ -9,8 +9,10 @@ export const navItems: NavItem[] = [
   { label: "Skills", href: "#skills" },
   { label: "Achievements", href: "#achievements" },
   { label: "Projects", href: "#projects" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Blog", href: "#blog" },
   { label: "Volunteering", href: "#volunteering" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -81,25 +83,97 @@ export const experiences: ExperienceItem[] = [
     company: "National Centre for Communication Security (NCCS)",
     role: "Security Assurance Standards (SAS) Division, Intern",
     period: "2026",
-    details:
-      "Researching Post-Quantum Cryptography (PQC) and its role in securing future communication systems; studying ITSAR telecom security standards; analyzing cryptographic protocol implementations.",
-    tags: ["Post-Quantum Cryptography", "ITSAR", "Telecom Security"],
+    details: [
+      {
+        text: "Designed and implemented virtual enterprise networks using EVE-NG, pfSense, and Cisco devices, configuring VLANs, Layer-3 routing, firewall policies, and NAT for network segmentation and access control.",
+        highlights: ["EVE-NG", "pfSense", "Cisco", "VLANs", "Layer-3 routing", "firewall policies", "NAT"],
+      },
+      {
+        text: "Performed protocol fuzzing on Netgear and Cisco routers using Synopsys Defensics, executing 200K+ test cases on ARP and ICMP protocols to evaluate protocol robustness and identify potential vulnerabilities.",
+        highlights: ["protocol fuzzing", "Netgear", "Cisco", "Synopsys Defensics", "200K+ test cases", "ARP", "ICMP"],
+      },
+      {
+        text: "Conducted vulnerability assessments using Tenable Nessus, analyzing 80+ security findings related to weak protocols, cryptographic algorithms, SSH/Telnet, SSL/TLS, and certificate configurations.",
+        highlights: ["vulnerability assessments", "Tenable Nessus", "80+ security findings", "cryptographic algorithms", "SSH/Telnet", "SSL/TLS"],
+      },
+      {
+        text: "Explored post-quantum cryptographic algorithms and quantum-safe migration strategies to understand emerging cybersecurity challenges and quantum-resistant security solutions.",
+        highlights: ["post-quantum cryptographic algorithms", "quantum-safe migration strategies", "quantum-resistant security solutions"],
+      },
+      {
+        text: "Worked under the guidance and mentorship of Sh. Umakant (ADET, SAS) and Sh. Ashish Vyas (ADG, SAS), gaining valuable insights into communication security, security assurance standards, and industry-level security assessment practices.",
+        highlights: ["Sh. Umakant", "Sh. Ashish Vyas", "communication security", "security assurance standards", "security assessment practices"],
+      },
+    ],
+    tags: [
+      "EVE-NG",
+      "pfSense",
+      "Cisco",
+      "VLANs",
+      "Layer-3 Routing",
+      "Protocol Fuzzing",
+      "Synopsys Defensics",
+      "Tenable Nessus",
+      "SSL/TLS",
+      "Post-Quantum Cryptography",
+    ],
   },
   {
     company: "Indian Institute of Technology Hyderabad (IITH)",
     role: "Security Research Intern",
     period: "Jun 2026 - Jul 2026",
-    details:
-      "Worked on application-specific symmetric-key primitives under Prof. Shibam Ghosh; studied the mathematics behind TLS, key exchange, and encryption algorithms; analyzed cryptographic algorithms in secure boot architectures.",
-    tags: ["Symmetric-Key Cryptography", "TLS", "Secure Boot"],
+    details: [
+      {
+        text: "Implemented application-specific symmetric-key cryptographic primitives under the guidance of Prof. Shibam Ghosh, focusing on cryptographic design, implementation, and security analysis.",
+        highlights: ["symmetric-key cryptographic primitives", "Prof. Shibam Ghosh", "cryptographic design", "security analysis"],
+      },
+      {
+        text: "Analyzed the mathematical foundations of TLS, key exchange mechanisms, and modern encryption algorithms to understand their underlying security properties.",
+        highlights: ["mathematical foundations of TLS", "key exchange mechanisms", "modern encryption algorithms"],
+      },
+      {
+        text: "Evaluated cryptographic algorithms used in secure boot architectures, studying their design, implementation, and resistance to various cryptanalytic attacks.",
+        highlights: ["cryptographic algorithms", "secure boot architectures", "cryptanalytic attacks"],
+      },
+    ],
+    tags: [
+      "Symmetric-Key Cryptography",
+      "Cryptographic Design",
+      "TLS",
+      "Key Exchange",
+      "Encryption Algorithms",
+      "Secure Boot",
+      "Cryptanalysis",
+    ],
   },
   {
     company: "GyanX",
     role: "Mobile Application Developer (Flutter)",
     period: "Nov 2025 - Feb 2026",
-    details:
-      "Built and shipped a cross-platform mobile app to the Play Store; designed a responsive production UI for Android/iOS; integrated Firebase auth and Swagger-documented APIs.",
-    tags: ["Flutter", "Firebase", "REST APIs"],
+    details: [
+      {
+        text: "Developed and deployed a cross-platform Flutter application from development to Google Play Store, implementing 20+ user-facing screens and end-to-end application workflows.",
+        highlights: ["cross-platform Flutter application", "Google Play Store", "20+ user-facing screens", "end-to-end application workflows"],
+      },
+      {
+        text: "Designed and implemented responsive, production-ready UI components for Android and iOS, ensuring consistent layouts and seamless user experiences across multiple application modules.",
+        highlights: ["responsive", "production-ready UI components", "Android and iOS", "seamless user experiences"],
+      },
+      {
+        text: "Integrated Firebase Authentication and Cloud Firestore for secure user authentication and real-time data management, along with Swagger-documented REST APIs for backend communication and data integration.",
+        highlights: ["Firebase Authentication", "Cloud Firestore", "secure user authentication", "real-time data management", "Swagger-documented REST APIs"],
+      },
+    ],
+    tags: [
+      "Flutter",
+      "Google Play Store",
+      "Responsive UI",
+      "Android",
+      "iOS",
+      "Firebase Authentication",
+      "Cloud Firestore",
+      "REST APIs",
+    ],
   },
 ];
 

@@ -28,8 +28,13 @@ export type ExperienceItem = {
   company: string;
   role: string;
   period: string;
-  details: string;
+  details: ExperienceDetail[];
   tags: string[];
+};
+
+export type ExperienceDetail = {
+  text: string;
+  highlights: string[];
 };
 
 export type SkillGroup = {

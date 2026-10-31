@@ -6,7 +6,7 @@ export default function TerminalSection() {
     <section id="terminal" className="section-divider section-spacing">
       <div className="site-container">
         <SectionHeader
-          eyebrow="08"
+          eyebrow="09"
           title="Interactive Terminal"
           description="Explore my background, tools, and projects through an interactive command line interface. Try running 'help'."
         />

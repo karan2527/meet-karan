@@ -48,7 +48,7 @@ export default function About() {
             </div>
 
             {/* Paragraph with Green Highlighted Keywords */}
-            <p className="text-base leading-8 text-zinc-400">
+            <p className="text-sm leading-7 text-zinc-400 sm:text-base">
               Over the past few years, I&apos;ve gained experience across{" "}
               <span className="text-[#00ff66] font-medium">cybersecurity and software development</span>, building mobile applications with Flutter and exploring security research. I currently work at{" "}
               <span className="text-[#00ff66] font-medium">NCCS, Government of India</span>, in the{" "}

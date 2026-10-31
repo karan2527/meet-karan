@@ -35,7 +35,7 @@ function VolunteeringCard({ item }: { item: VolunteeringItem }) {
               </span>
             </div>
 
-            <h3 className="mt-3 text-xl font-semibold tracking-tight text-[#00ff66]">
+            <h3 className="mt-3 text-lg font-semibold tracking-tight text-[#00ff66]">
               {item.organization}
             </h3>
             <p className="mt-1 text-xs text-zinc-300 font-medium font-mono">
@@ -101,7 +101,7 @@ export default function Volunteering({ items }: VolunteeringProps) {
     <section id="volunteering" className="section-divider section-spacing">
       <div className="site-container">
         <SectionHeader
-          eyebrow="07"
+          eyebrow="08"
           title="Volunteering"
           description="Giving back to the developer and cybersecurity community through open-source contributions, peer mentoring, and hackathons. Click any card to flip and view event photo."
         />

@@ -10,7 +10,7 @@ export default function Blog({ posts }: BlogProps) {
     <section id="blog" className="section-divider section-spacing">
       <div className="site-container">
         <SectionHeader
-          eyebrow="06"
+          eyebrow="07"
           title="Blog"
           description="Articles, research notes, and insights on cryptography, security, and mobile development."
         />
@@ -19,7 +19,7 @@ export default function Blog({ posts }: BlogProps) {
           {posts.map((post) => (
             <article
               key={post.title}
-              className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0c1015]/90 p-6 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-[#00ff66]/40 hover:bg-white/[0.04]"
+              className="group flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0c1015]/90 p-5 shadow-xl transition duration-300 hover:-translate-y-1 hover:border-[#00ff66]/40 hover:bg-white/[0.04]"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-4">
@@ -31,7 +31,7 @@ export default function Blog({ posts }: BlogProps) {
                   </span>
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-semibold tracking-tight text-white transition duration-200 group-hover:text-[#00ff66]">
+                <h3 className="text-base sm:text-lg font-semibold tracking-tight text-white transition duration-200 group-hover:text-[#00ff66]">
                   {post.title}
                 </h3>
 
