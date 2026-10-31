@@ -18,6 +18,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at top, rgba(16, 185, 129, 0.14), transparent 35%),
     linear-gradient(180deg, #070b10 0%, #0b1117 100%);
@@ -47,23 +48,14 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 72rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  max-width: 80rem;
+  padding-left: clamp(1rem, 4vw, 2.5rem);
+  padding-right: clamp(1rem, 4vw, 2.5rem);
 }
 
-@media (min-width: 640px) {
-  .site-container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .site-container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+.section-spacing {
+  padding-top: clamp(3.5rem, 8vw, 5rem);
+  padding-bottom: clamp(3.5rem, 8vw, 5rem);
 }
 
 .section-divider {
@@ -80,4 +72,9 @@ img {
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.12);
   pointer-events: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }

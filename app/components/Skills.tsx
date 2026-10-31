@@ -8,7 +8,7 @@ type SkillsProps = {
 
 export default function Skills({ groups }: SkillsProps) {
   return (
-    <section id="skills" className="section-divider py-20">
+    <section id="skills" className="section-divider section-spacing">
       <div className="site-container">
         <SectionHeader
           eyebrow="03"

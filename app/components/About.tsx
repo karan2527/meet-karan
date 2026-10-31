@@ -2,7 +2,7 @@ import SectionHeader from "./SectionHeader";
 
 export default function About() {
   return (
-    <section id="about" className="section-divider py-20">
+    <section id="about" className="section-divider section-spacing">
       <div className="site-container">
         <SectionHeader
           eyebrow="01"
@@ -10,12 +10,12 @@ export default function About() {
           description="Security Researcher | Flutter Developer | Software Developer"
         />
 
-        <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+        <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:gap-10 md:items-center">
           <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.02] p-3">
             <img
               src="/images/about.jpg"
               alt="Karan Jain working desk"
-              className="h-[360px] sm:h-[420px] w-full rounded-[1.5rem] object-cover object-[center_35%]"
+              className="aspect-[4/3] w-full rounded-[1.5rem] object-cover object-[center_35%] sm:aspect-auto sm:h-[420px]"
             />
           </div>
 

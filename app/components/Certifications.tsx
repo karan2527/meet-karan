@@ -8,7 +8,7 @@ type CertificationsProps = {
 
 export default function Certifications({ items }: CertificationsProps) {
   return (
-    <section id="certifications" className="section-divider py-20">
+    <section id="certifications" className="section-divider section-spacing">
       <div className="site-container">
         <SectionHeader
           eyebrow="06"

@@ -198,7 +198,7 @@ export default function Navbar({ navItems, socialLinks }: NavbarProps) {
         {/* ================================================= */}
         {/* DESKTOP LEFT: Social Logos (Rounded Rectangles)   */}
         {/* ================================================= */}
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden xl:flex items-center gap-2">
           {socialLinks.map((item) => (
             <a
               key={item.label}
@@ -225,7 +225,7 @@ export default function Navbar({ navItems, socialLinks }: NavbarProps) {
         {/* ================================================= */}
         {/* MOBILE LEFT: Hamburger for Socials                */}
         {/* ================================================= */}
-        <div className="flex md:hidden items-center">
+        <div className="flex xl:hidden items-center">
           <button
             onClick={toggleSocial}
             aria-label="Toggle Social Links Menu"
@@ -251,7 +251,7 @@ export default function Navbar({ navItems, socialLinks }: NavbarProps) {
         {/* ================================================= */}
         {/* MOBILE MIDDLE: Bangalore / IST Clock              */}
         {/* ================================================= */}
-        <div className="flex md:hidden items-center">
+        <div className="flex xl:hidden items-center">
           <div
             className="
               flex items-center gap-2
@@ -276,7 +276,7 @@ export default function Navbar({ navItems, socialLinks }: NavbarProps) {
         {/* ================================================= */}
         {/* DESKTOP RIGHT: Nav Tabs + Clock                   */}
         {/* ================================================= */}
-        <div className="hidden md:flex items-center gap-4 lg:gap-6 ml-auto pl-4">
+        <div className="hidden xl:flex items-center gap-4 lg:gap-6 ml-auto pl-4">
           
           <nav className="flex items-center gap-2 lg:gap-3.5 text-sm text-zinc-400">
             {navItems.map((item) => {
@@ -326,7 +326,7 @@ export default function Navbar({ navItems, socialLinks }: NavbarProps) {
         {/* ================================================= */}
         {/* MOBILE RIGHT: Hamburger for Navigation Tabs       */}
         {/* ================================================= */}
-        <div className="flex md:hidden items-center">
+        <div className="flex xl:hidden items-center">
           <button
             onClick={toggleNav}
             aria-label="Toggle Navigation Tabs Menu"
@@ -364,7 +364,7 @@ export default function Navbar({ navItems, socialLinks }: NavbarProps) {
       <div
         className={`
           absolute left-0 top-full w-full border-b border-white/10
-          bg-[#070b10]/98 backdrop-blur-2xl transition-all duration-300 ease-in-out md:hidden shadow-2xl
+          bg-[#070b10]/98 backdrop-blur-2xl transition-all duration-300 ease-in-out xl:hidden shadow-2xl
           ${isSocialOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"}
         `}
       >
@@ -402,7 +402,7 @@ export default function Navbar({ navItems, socialLinks }: NavbarProps) {
       <div
         className={`
           absolute left-0 top-full w-full border-b border-white/10
-          bg-[#070b10]/98 backdrop-blur-2xl transition-all duration-300 ease-in-out md:hidden shadow-2xl
+          bg-[#070b10]/98 backdrop-blur-2xl transition-all duration-300 ease-in-out xl:hidden shadow-2xl
           ${isNavOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"}
         `}
       >

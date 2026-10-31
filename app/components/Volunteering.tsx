@@ -14,7 +14,7 @@ function VolunteeringCard({ item }: { item: VolunteeringItem }) {
   return (
     <div
       onClick={() => setIsFlipped((prev) => !prev)}
-      className="group h-[320px] w-full cursor-pointer [perspective:1000px]"
+      className="group h-[280px] w-full cursor-pointer [perspective:1000px] sm:h-[320px]"
     >
       <div
         className={`relative h-full w-full rounded-2xl transition-all duration-700 [transform-style:preserve-3d] ${isFlipped ? "[transform:rotateY(180deg)]" : ""
@@ -98,7 +98,7 @@ function VolunteeringCard({ item }: { item: VolunteeringItem }) {
 
 export default function Volunteering({ items }: VolunteeringProps) {
   return (
-    <section id="volunteering" className="section-divider py-20">
+    <section id="volunteering" className="section-divider section-spacing">
       <div className="site-container">
         <SectionHeader
           eyebrow="07"

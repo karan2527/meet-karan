@@ -3,7 +3,7 @@ import TerminalCard from "./TerminalCard";
 
 export default function TerminalSection() {
   return (
-    <section id="terminal" className="section-divider py-20">
+    <section id="terminal" className="section-divider section-spacing">
       <div className="site-container">
         <SectionHeader
           eyebrow="08"

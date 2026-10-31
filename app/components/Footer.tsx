@@ -7,8 +7,8 @@ type FooterProps = {
 export default function Footer({ socialLinks }: FooterProps) {
   return (
     <footer className="border-t border-white/10 bg-black/60 py-12">
-      <div className="site-container flex flex-col items-center justify-between gap-6 sm:flex-row">
-        <div>
+      <div className="site-container flex flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
+        <div className="min-w-0">
           <p className="text-sm font-medium text-white">
             Karan Jain <span className="text-[#00ff66] font-mono">(AKA Manware)</span>
           </p>
@@ -17,7 +17,7 @@ export default function Footer({ socialLinks }: FooterProps) {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-4 text-xs text-zinc-400">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-zinc-400 sm:justify-start">
           {socialLinks.map((item) => (
             <a
               key={item.label}

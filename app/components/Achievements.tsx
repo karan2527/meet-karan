@@ -9,7 +9,7 @@ type AchievementsProps = {
 
 export default function Achievements({ items, invitations }: AchievementsProps) {
   return (
-    <section id="achievements" className="section-divider py-20">
+    <section id="achievements" className="section-divider section-spacing">
       <div className="site-container">
         <SectionHeader
           eyebrow="04"

@@ -7,7 +7,7 @@ type BlogProps = {
 
 export default function Blog({ posts }: BlogProps) {
   return (
-    <section id="blog" className="section-divider py-20">
+    <section id="blog" className="section-divider section-spacing">
       <div className="site-container">
         <SectionHeader
           eyebrow="06"

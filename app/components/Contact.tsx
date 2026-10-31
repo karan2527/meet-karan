@@ -10,7 +10,7 @@ export default function Contact() {
   };
 
   return (
-    <footer id="contact" className="section-divider pt-16">
+    <footer id="contact" className="section-divider section-spacing">
       <div className="site-container">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div>

@@ -7,7 +7,7 @@ import CyberDino from "./CyberDino";
 
 export default function Hero() {
   return (
-    <div className="grid grid-cols-1 items-center gap-10 py-8 sm:py-12 md:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
+    <div className="grid grid-cols-1 items-center gap-8 py-8 sm:gap-10 sm:py-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14 lg:py-16">
 
       {/* ================================================= */}
       {/* LEFT SIDE */}
@@ -21,7 +21,7 @@ export default function Hero() {
         </p>
 
         {/* Main heading */}
-        <h1 className="max-w-xl text-3xl font-medium leading-[1.05] tracking-[-0.06em] text-white sm:text-5xl lg:text-[4rem]">
+        <h1 className="max-w-xl text-[clamp(2rem,7vw,4rem)] font-medium leading-[1.05] tracking-[-0.06em] text-white">
           Hi, I&apos;m Karan Jain!
         </h1>
 
@@ -43,7 +43,7 @@ export default function Hero() {
               &lt;
             </span>
 
-            <span className="mx-2 sm:mx-3 text-white">
+            <span className="mx-2 text-white sm:mx-3">
               I&apos;m
             </span>
 
@@ -114,7 +114,7 @@ export default function Hero() {
             <img
               src="/images/profile.jpg"
               alt="Karan Jain profile"
-              className="h-[320px] sm:h-[400px] lg:h-[460px] w-full object-cover object-[center_35%]"
+              className="aspect-[4/5] h-auto w-full object-cover object-[center_35%] sm:aspect-auto sm:h-[400px] lg:h-[460px]"
             />
 
             <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />

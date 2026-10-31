@@ -42,7 +42,7 @@ export default function Projects({ projects }: ProjectsProps) {
   const categories: FilterCategory[] = ["All", "Security", "Mobile", "Open Source"];
 
   return (
-    <section id="projects" className="section-divider py-20">
+    <section id="projects" className="section-divider section-spacing">
       <div className="site-container">
         <SectionHeader
           eyebrow="05"

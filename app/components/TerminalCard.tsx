@@ -259,7 +259,7 @@ export default function TerminalCard({
         )}
       </div>
 
-      <div className="space-y-1.5 p-5 font-mono text-sm leading-7 text-zinc-100 min-h-[180px] max-h-[380px] overflow-y-auto">
+      <div className="space-y-1.5 overflow-x-auto p-4 font-mono text-sm leading-7 text-zinc-100 min-h-[180px] max-h-[380px] sm:p-5">
         {history.map((line, index) => renderLine(line, index))}
 
         {interactive && (
@@ -278,7 +278,7 @@ export default function TerminalCard({
       </div>
 
       {interactive && (
-        <div className="flex flex-wrap items-center gap-2 border-t border-white/10 px-4 py-3 bg-black/40">
+        <div className="flex flex-wrap items-center gap-2 border-t border-white/10 bg-black/40 px-3 py-3 sm:px-4">
           <span className="text-[10px] uppercase tracking-wider text-zinc-500 self-center mr-1 font-mono">
             Commands:
           </span>
