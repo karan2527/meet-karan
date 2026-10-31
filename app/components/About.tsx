@@ -50,21 +50,20 @@ export default function About() {
             {/* Paragraph with Green Highlighted Keywords */}
             <p className="text-sm leading-7 text-zinc-400 sm:text-base">
               Over the past few years, I&apos;ve gained experience across{" "}
-              <span className="text-[#00ff66] font-medium">cybersecurity and software development</span>, building mobile applications with Flutter and exploring security research. I currently work at{" "}
+              <span className="text-[#00ff66] font-medium">cybersecurity and software development</span>, building mobile applications with Flutter and exploring security research. I recently completed an internship at{" "}
               <span className="text-[#00ff66] font-medium">NCCS, Government of India</span>, in the{" "}
               <span className="text-[#00ff66] font-medium">Security Assurance Standards (SAS) Division</span>. Previously, I worked as a{" "}
               <span className="text-[#00ff66] font-medium">Security Researcher at IIT Hyderabad</span>, focusing on{" "}
               <span className="text-[#00ff66] font-medium">cryptanalysis and secure booting</span>, and interned at{" "}
               <span className="text-[#00ff66] font-medium">GyanX as a Mobile Application Developer</span>. I&apos;ve participated in and won multiple offline hackathons, including the{" "}
               <span className="text-[#00ff66] font-medium">Kaspersky National Cybersecurity Hackathon at MIT Bengaluru</span>, and I&apos;m currently among the{" "}
-              <span className="text-[#00ff66] font-medium">top 4% on TryHackMe</span>. I&apos;m also active in{" "}
+              <span className="text-[#00ff66] font-medium">top 3% on TryHackMe</span>. I&apos;m also active in{" "}
               <span className="text-[#00ff66] font-medium">open source</span>, contributing to{" "}
               <span className="text-[#00ff66] font-medium">Flutter Kanpur</span> and apps like{" "}
               <span className="text-[#00ff66] font-medium">ReadMe</span> and{" "}
               <span className="text-[#00ff66] font-medium">Azaadi</span>, while being involved with the{" "}
               <span className="text-[#00ff66] font-medium">Aegis Club</span>, where we organize cybersecurity hackathons, CTFs, and training sessions. I&apos;ve attended the{" "}
-              <span className="text-[#00ff66] font-medium">ACM Summer School 2026</span> on Key Symmetric Cryptography at{" "}
-              <span className="text-[#00ff66] font-medium">IIT Hyderabad</span>, and I&apos;m also building a startup with two friends, which is currently incubated.
+              <span className="text-[#00ff66] font-medium">ACM India Summer School 2026 on Symmetric Key Cryptography at IIT Hyderabad</span>, and I&apos;m also building a startup with two friends, which is currently incubated.
             </p>
           </div>
         </div>

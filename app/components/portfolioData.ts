@@ -279,7 +279,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: "National Centre for Communication Security (NCCS)",
     role: "Security Assurance Standards (SAS) Division, Intern",
-    period: "2026",
+    period: "Jul 2026 – Sep 2026",
     details: [
       {
         text: "Designed and implemented virtual enterprise networks using EVE-NG, pfSense, and Cisco devices, configuring VLANs, Layer-3 routing, firewall policies, and NAT for network segmentation and access control.",
